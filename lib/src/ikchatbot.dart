@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:ikchatbot/src/thnk_you.dart';
 import '../ikchatbot.dart';
 //import 'package:flutter_tts/flutter_tts.dart';
 

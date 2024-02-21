@@ -4,4 +4,5 @@ export 'src/ikchatbot.dart';
 export 'src/response.dart';
 export 'src/keywords.dart';
 export 'src/chatmessage.dart';
+export 'src/thnk_you.dart';
 export 'src/ike_chatbot_config.dart';
