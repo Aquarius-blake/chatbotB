@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class ChatMessage extends StatelessWidget {
   final String text;
   final bool isUser;
+  final Color bottextcolor;
+  final Color usertextcolor;
   final DateTime messageTime;
   final Color botColor;
   final Color userColor;
@@ -15,6 +17,8 @@ class ChatMessage extends StatelessWidget {
     required this.isUser,
     required this.messageTime,
     required this.botIcon,
+    required this.usertextcolor,
+    required this.bottextcolor,
     required this.userIcon,
     required this.botColor,
     required this.userColor,
@@ -63,7 +67,9 @@ class ChatMessage extends StatelessWidget {
                 ),
                 child: Text(
                   text,
-                  style: const TextStyle(color: Colors.white),
+                  style:  TextStyle(
+                    color: isUser ? usertextcolor : bottextcolor,
+                    ),
                 ),
               ),
               if (isUser)

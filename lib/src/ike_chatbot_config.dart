@@ -16,6 +16,8 @@ class IkChatBotConfig {
   int closingTime;
   int delayResponse;
   final Icon botIcon;
+  final Color bottextcolor;
+  final Color usertextcolor;
   final Icon userIcon;
   final String waitingText;
   final Icon sendIcon;
@@ -79,5 +81,7 @@ class IkChatBotConfig {
     required this.delayBot,
     required this.useAsset,
     required this.backgroundAssetimage,
+    required this.bottextcolor,
+    required this.usertextcolor,
   });
 }
