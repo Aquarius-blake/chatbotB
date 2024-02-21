@@ -10,6 +10,7 @@ class ChatMessage extends StatelessWidget {
   final Icon userIcon;
 
   const ChatMessage({
+    super.key,
     required this.text,
     required this.isUser,
     required this.messageTime,
@@ -23,17 +24,17 @@ class ChatMessage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment:
-      isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+          isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment:
-            isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
+                isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
             children: [
               if (!isUser)
-                 Padding(
+                Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CircleAvatar(
                     backgroundColor: userColor,
@@ -47,18 +48,18 @@ class ChatMessage extends StatelessWidget {
                 ),
                 padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
-                  color: isUser ? userColor :  botColor,
+                  color: isUser ? userColor : botColor,
                   borderRadius: isUser
                       ? const BorderRadius.only(
-                    topLeft: Radius.circular(12.0),
-                    bottomLeft: Radius.circular(12.0),
-                    bottomRight: Radius.circular(12.0),
-                  )
+                          topLeft: Radius.circular(12.0),
+                          bottomLeft: Radius.circular(12.0),
+                          bottomRight: Radius.circular(12.0),
+                        )
                       : const BorderRadius.only(
-                    topRight: Radius.circular(12.0),
-                    bottomLeft: Radius.circular(12.0),
-                    bottomRight: Radius.circular(12.0),
-                  ),
+                          topRight: Radius.circular(12.0),
+                          bottomLeft: Radius.circular(12.0),
+                          bottomRight: Radius.circular(12.0),
+                        ),
                 ),
                 child: Text(
                   text,
@@ -66,7 +67,7 @@ class ChatMessage extends StatelessWidget {
                 ),
               ),
               if (isUser)
-                 Padding(
+                Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CircleAvatar(
                     backgroundColor: userColor,
