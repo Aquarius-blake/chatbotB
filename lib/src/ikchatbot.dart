@@ -297,8 +297,9 @@ class _ikchatbotState extends State<ikchatbot> {
               ),
             ),
             IconButton(
-              icon: const Icon(
+              icon:  Icon(
                 Icons.send,
+                color: widget.config.sendIcon.color,
               ),
               onPressed: () {
                 _handleSubmitted(_textController.text);
