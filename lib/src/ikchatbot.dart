@@ -6,8 +6,8 @@ import '../ikchatbot.dart';
 // ignore: camel_case_types
 class ikchatbot extends StatefulWidget {
   final IkChatBotConfig config;
-
-  const ikchatbot({Key? key, required this.config}) : super(key: key);
+  final Function? onchatend;
+  const ikchatbot({Key? key, required this.config,this.onchatend}) : super(key: key);
 
   @override
   State<ikchatbot> createState() => _ikchatbotState();
@@ -216,6 +216,7 @@ class _ikchatbotState extends State<ikchatbot> {
     _closeTimer = Timer(Duration(minutes: widget.config.closingTime), () {
       setState(() {
         _conversationOver = true; // Mark conversation as over
+        widget.onchatend!(_messages);
         _addBotMessage(widget.config.closingMessage); // Add closing message
       });
     });
