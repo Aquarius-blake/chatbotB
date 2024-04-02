@@ -7,7 +7,8 @@ import '../ikchatbot.dart';
 class ikchatbot extends StatefulWidget {
   final IkChatBotConfig config;
   final Function? onchatend;
-  const ikchatbot({Key? key, required this.config,this.onchatend}) : super(key: key);
+  final Function? onchatsend;
+  const ikchatbot({Key? key, required this.config,this.onchatend,this.onchatsend}) : super(key: key);
 
   @override
   State<ikchatbot> createState() => _ikchatbotState();
@@ -304,6 +305,7 @@ class _ikchatbotState extends State<ikchatbot> {
               ),
               onPressed: () {
                 _handleSubmitted(_textController.text);
+                widget.onchatsend!(_messages);
               },
             ),
           ],
