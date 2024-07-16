@@ -1,7 +1,7 @@
 name: chatingbot
 description: chatingBot is a powerful fully customizable chatbot you can add to your flutter project for all plaftorms
-version: 1.0.5
-homepage: https://myiketech.blogspot.com
+version: 1.0.6
+homepage: https://aquarius-blake.github.io/portfolio/
 repository: https://github.com/Aquarius-blake/chatbotB
 
 environment:
@@ -20,6 +20,6 @@ dev_dependencies:
 
 flutter:
 
-  assets:
-    - lib/assets/
+  # assets:
+    # - lib/assets/
 
